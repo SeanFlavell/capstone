@@ -1,0 +1,48 @@
+#map {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .info-window-content {
+    height: 500px;
+    width: 500px;
+    text-align: center;
+  }
+
+  .info-window-image {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  #moveBoxButton {
+      position: absolute;
+      top: 10px;
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Adjust to ensure it's perfectly centered */
+      z-index: 2;
+      pointer-events: auto;
+      background-color: green;
+      color: white;
+      height: 60px;
+      width: 120px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #box {
+      position: absolute;
+      background-color: #181818;
+      width: 10%;
+      height: calc(100% - 20px);
+      top: 0px;
+      bottom: 10px;
+      left: -60%;
+      transition: left 1s ease-in-out;
+      padding: 20px;
+      color: white;
+      overflow: auto;
+      pointer-events: auto; /* Ensure the box is scrollable */
+    }

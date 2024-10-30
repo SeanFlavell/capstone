@@ -1,26 +1,14 @@
 <html>
   <head>
     <title>Capstone Project Starting</title>
-
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
+  
   <body>
-    <gmp-map
-      center="43.4142989,-124.2301242"
-      zoom="4"
-      map-id="DEMO_MAP_ID"
-      style="height: 400px"
-    >
-      <gmp-advanced-marker
-        position="37.4220656,-122.0840897"
-        title="Mountain View, CA"
-      ></gmp-advanced-marker>
-      <gmp-advanced-marker
-        position="47.648994,-122.3503845"
-        title="Seattle, WA"
-      ></gmp-advanced-marker>
-    </gmp-map>
+    
+    <div id="map"></div>
+    <button id="moveBoxButton" onclick="moveBox()">Move Box</button>
+    <div id="container"></div>
 
     <!-- 
       The `defer` attribute causes the script to execute after the full HTML
@@ -29,9 +17,12 @@
       https://developers.google.com/maps/documentation/javascript/load-maps-js-api
       for more information.
       -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=maps,marker&v=beta"
-      defer
-    ></script>
-  </body>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=marker" async defer></script>
+  <script src="getJSONData.js" async defer></script>
+  <script src="putJSONData.js" async defer></script>	  
+  <script src="markers.js" async defer></script>
+  <script src="sidebox.js" async defer></script>
+  <script src="initMap.js" async defer></script>
+</body>
 </html>
