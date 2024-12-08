@@ -1,7 +1,6 @@
 var locations = [];
 var markers = [];
 var datas = [];
-var userId = 58367; // 96024 
 var arrayLoc = 0;
 
 // Used to place the markers currently in the JSON bin though only works for Sean Flavell's so far since the JSON bin isn't the final one.
@@ -108,7 +107,7 @@ async function clickMarker()
 	datas[arrayLoc].markers.push(tempArray);
 	console.log("hey");
 	console.log(datas);
-	putJSONData(datas)
+	putJSONDataMarker(datas)
 		.then(() => {console.log("Sent updated user data to jsonbin:", updatedUser);}).catch(error => {
 		console.error("Error updating jsonbin.io:", error.message);
 		document.getElementById('response').innerHTML = 'Error: ' + error.message;});
@@ -188,7 +187,7 @@ async function addLocation() {
 			title: data.title,
 			coordinates: data.location
 		}));
-		putJSONData(datas)
+		putJSONDataMarker(datas)
 		.then(() => {console.log("Sent updated user data to jsonbin:", updatedUser);}).catch(error => {
 		console.error("Error updating jsonbin.io:", error.message);
 		document.getElementById('response').innerHTML = 'Error: ' + error.message;});

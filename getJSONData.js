@@ -4,13 +4,13 @@ const getJSONData = async () => {
 
 	// REPLACE YOUR_BIN_ID with the actual ID of your bin
 	
-	const binId = 'put id here'; 
+	const binId = '67465bcde41b4d34e45b3e9f'; 
 	
 	 
 	
 	// Replace YOUR_API_KEY with your JSONbin.io API key
 	
-	const apiKey = 'put key here'; 
+	const apiKey = '$2a$10$C0bYn9YQ.EqR3qlE.w1l2O5nVDTJwHJ8rc.G8Xw8GtLgw.f9AXzMe'; 
 	
 	 
 	
