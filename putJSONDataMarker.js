@@ -2,9 +2,9 @@
 
 const putJSONDataMarker = async (updatedData) => {
 
-	const binId = '67465bcde41b4d34e45b3e9f'; 
+	const binId = ''; 
   
-	const apiKey = '$2a$10$C0bYn9YQ.EqR3qlE.w1l2O5nVDTJwHJ8rc.G8Xw8GtLgw.f9AXzMe'; 
+	const apiKey = ''; 
   
    
   

@@ -1,6 +1,6 @@
-const binId = '67465bcde41b4d34e45b3e9f';
+const binId = '';
 const url = "https://api.jsonbin.io/v3/b/"+binId+"?meta=false"; // Replace with your bin ID
-const apikey = "$2a$10$C0bYn9YQ.EqR3qlE.w1l2O5nVDTJwHJ8rc.G8Xw8GtLgw.f9AXzMe"; // Replace with your API key
+const apikey = ""; // Replace with your API key
 
 // Helper function to generate a unique 5-digit userID
 function generateUniqueId(existingIds) {

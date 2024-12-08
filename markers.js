@@ -65,7 +65,7 @@ async function clickMarker()
 	
 	// Google puts parentheses so I have this to remove them.
 	const finLocation = latLnglocation.substring(0, latLnglocation.length-1);
-	document.getElementById('location').textContent = finLocation;
+	document.getElementById('location').value = finLocation;
 	});
 }
 
@@ -105,7 +105,7 @@ async function clickMarker()
 	});
 
 	datas[arrayLoc].markers.push(tempArray);
-	console.log("hey");
+
 	console.log(datas);
 	putJSONDataMarker(datas)
 		.then(() => {console.log("Sent updated user data to jsonbin:", updatedUser);}).catch(error => {
@@ -120,7 +120,7 @@ async function addLocation() {
 	//var clickedLocation = event.latLng;
 	//const location = clickedLocation.lat() + ', ' + clickedLocation.lng()
     const title = document.getElementById('title').value;
-    const location = document.getElementById('location').textContent;
+    const location = document.getElementById('location').value;
     const image = document.getElementById('imageText').value;
     const about = document.getElementById('about').value;
 
