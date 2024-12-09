@@ -2,9 +2,9 @@
 
 const putJSONDataMarker = async (updatedData) => {
 
-	const binId = ''; 
+	const binId = '67465bcde41b4d34e45b3e9f'; 
   
-	const apiKey = ''; 
+	const apiKey = '$2a$10$C0bYn9YQ.EqR3qlE.w1l2O5nVDTJwHJ8rc.G8Xw8GtLgw.f9AXzMe'; 
   
    
   
@@ -64,11 +64,11 @@ const putJSONDataMarker = async (updatedData) => {
   
 			  
   
-			  document.getElementById('response').innerHTML = 'Data successfully submitted! Response: ' + JSON.stringify(result);
+			  //alert('Data successfully submitted! Response: ' + JSON.stringify(result));
   
 	} catch (error) {
   
-			  document.getElementById('response').innerHTML = 'Error: ' + error.message;
+			  alert('Error: ' + error.message);
   
 	}
   

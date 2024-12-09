@@ -87,12 +87,13 @@ async function clickMarker()
 	}
 
 	// html for the box that opens when a user clicks on a marker
-	let content = '<div class="info-window-content">' +
-  '<div><strong><h1>' + title + '</h1></strong></div><br>' +
-						  '<img class="info-window-image" src="' + image + '" alt="' + title + '">' +
-						  
-						  '<div>' + about + '</div>' +
-						  '</div>';
+	let content = `<div class="info-window-content">
+	  <div><strong><h1>` + title + `</h1></strong></div><br>
+							  <img class="info-window-image" src="` + image + `" alt="` + title + `">
+							  
+							  <div>` + about + `</div>'
+							  <br><button onclick="deleteMarker('` + title + `')">Delete Marker</button>
+							  </div>`;
 
 
 
@@ -103,14 +104,12 @@ async function clickMarker()
 	marker.addListener('click', () => {
 	  infowindow.open(map, marker);
 	});
-
+	
+	markers.push(marker);
+	markers.push(tempArray);
 	datas[arrayLoc].markers.push(tempArray);
-
-	console.log(datas);
 	putJSONDataMarker(datas)
-		.then(() => {console.log("Sent updated user data to jsonbin:", updatedUser);}).catch(error => {
-		console.error("Error updating jsonbin.io:", error.message);
-		document.getElementById('response').innerHTML = 'Error: ' + error.message;});
+		.then(() => {console.log("Sent updated user data to jsonbin:", tempArray);}).catch(error => {console.error("Error updating jsonbin.io:", error.message);});
 
   }
 
@@ -175,7 +174,6 @@ async function addLocation() {
 			// Remove the marker from the markersData array
 			markers.splice(markerIndex, 1);
 			datas[arrayLoc].markers.splice(markerIndex, 1);
-			alert('Marker deleted successfully!');
 			alertCurrentMarkers(); // Alert the current JSON array after deleting a marker
 		}
 	}
@@ -188,9 +186,8 @@ async function addLocation() {
 			coordinates: data.location
 		}));
 		putJSONDataMarker(datas)
-		.then(() => {console.log("Sent updated user data to jsonbin:", updatedUser);}).catch(error => {
-		console.error("Error updating jsonbin.io:", error.message);
-		document.getElementById('response').innerHTML = 'Error: ' + error.message;});
+		.then(() => {console.log("Sent updated user data to jsonbin");}).catch(error => {
+		console.error("Error updating jsonbin.io:", error.message);});
 		alert('Current Markers Data:\n' + JSON.stringify(markersJSON, null, 2));
 	}
 

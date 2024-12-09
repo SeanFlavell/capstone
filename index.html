@@ -5,89 +5,14 @@
   </head>
 	<!DOCTYPE html>
   <title>Fog Of World</title>
-  <style>
-    /* General page styling */
-    body {
-      font-family: Arial, sans-serif; 
-      margin: 5;
-      padding: 0;
-	  background-image: url('https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cumulus-cloud.jpg');
-	  background-size: cover;
-	  background-position: center;
-    }
-
-    /* Modal styling */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1000; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-    }
-
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto; /* 15% from top and centered */
-      padding: 20px;
-      border: 1px solid #888;
-      width: 20%; /* Could be more or less, depending on screen size */
-      text-align: center;
-    }
-
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #0a06ee;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      background-color: #0056b3;
-    }
-
-	.signup-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #004d25;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .signup-button:hover {
-      background-color: #006c34;
-    }
-  </style>
 </head>
 <body>
 
-<h2>Fog Of World</h2>
+
+<div id="hover-area"></div>
+<div id="top-box">
+
+<!-- <h2>Fog Of World</h2> -->
 <!-- Trigger Button -->
 <button id="openModalBtn" class="button">Login or Sign up</button>
 
@@ -97,9 +22,12 @@
     <span class="close" id="closeModalBtn">&times;</span>
     <h2>Fog of World</h2>
     <p>Welcome:</p>
-    <a href="login.html" class="button">Login</a>
+    <a href="login.html" class="login-button">Login</a>
 	<a href="signup.html" class="signup-button">Sign up</a>
   </div>
+</div>
+</div>
+
 </div>
 
 <script>
@@ -142,42 +70,6 @@
 			}
 		});
     </script>
-    <style>
-      
-      #map {
-        height: 91vh;
-        width: 100%;
-      }
-
-      .info-window-content {
-        height: 500px;
-        width: 500px;
-        text-align: center;
-      }
-
-      .info-window-image {
-        max-width: 400px;
-        max-height: 400px;
-        width: auto;
-        height: auto;
-        margin-bottom: 10px;
-      }
-
-	    #box {
-		  position: absolute;
-		  background-color: #181818;
-		  width: 10%;
-		  height: calc(100% - 20px);
-		  top: 0px;
-		  bottom: 10px;
-		  left: -60%;
-		  transition: left 1s ease-in-out;
-		  padding: 20px;
-		  color: white;
-		  overflow: auto;
-		  pointer-events: auto; /* Ensure the box is scrollable */
-	    }
-   </style>
   </head>
   
   <body>
