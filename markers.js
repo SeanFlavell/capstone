@@ -8,13 +8,13 @@ async function placeJSONMarkers() {
 	
 	jsonDataString = await getJSONData();
 		  datas = JSON.parse(jsonDataString);
-		  
+		  userId = currentUser.userId;
 		  var found = false;
-
+		  var length = datas.length;
 		  // finds the location of the user in the array by using the id
-		  for(arrayLoc = 0; arrayLoc < datas.length; arrayLoc++)
+		  for(arrayLoc = 0; arrayLoc < length; arrayLoc++)
 		  {
-				if(datas[arrayLoc].ID == userId)
+				if(datas[arrayLoc].userId == userId)
 				{
 					found = true;
 					break;
@@ -104,7 +104,6 @@ async function clickMarker()
 	marker.addListener('click', () => {
 	  infowindow.open(map, marker);
 	});
-	
 	markers.push(marker);
 	markers.push(tempArray);
 	datas[arrayLoc].markers.push(tempArray);
